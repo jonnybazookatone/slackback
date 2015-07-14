@@ -6,9 +6,8 @@ Views
 import json
 import requests
 
-from flask import current_app, request, abort
+from flask import current_app, request
 from flask.ext.restful import Resource
-from flask.ext.discoverer import advertise
 from client import client
 from utils import get_post_data, err
 
