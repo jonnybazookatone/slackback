@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jonnybazookatone/slackback.svg?branch=master)](https://travis-ci.org/jonnybazookatone/slackback)
+
 # Slackback
 A small web service that allows you to embed a web form within your web application, which forwards the content of the web form to a slack chat room of your dev team.
 
