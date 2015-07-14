@@ -1,3 +1,4 @@
-Authors and contributors to feedback (listed alphabetically):
+Authors and contributors to slackback (listed alphabetically):
 
 - Jonathan Elliott
+- Vladimir Sudilovsky

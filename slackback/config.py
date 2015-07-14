@@ -1,8 +1,20 @@
+# encoding: utf-8
 """
 Configuration file. Please prefix application specific config values with
 the application name.
 """
 
+# Slack settings
+SLACKBACK_CHANNEL = '#feedback'
+SLACKBACK_EMOJI = ':goberserk:'
+SLACKBACK_USERNAME = 'TownCrier'
+
+# These values are necessary only if the app needs to be a client of the API
+FEEDBACK_SLACK_END_POINT = 'https://hooks.slack.com/services/TOKEN/TOKEN'
+GOOGLE_RECAPTCHA_ENDPOINT = 'https://www.google.com/recaptcha/api/siteverify'
+GOOGLE_RECAPTCHA_PRIVATE_KEY = 'MY_RECAPTCHA_KEY'
+
+# Log settings
 SAMPLE_APPLICATION_LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
@@ -35,15 +47,8 @@ SAMPLE_APPLICATION_LOGGING = {
     'loggers': {
         '': {
             'handlers': ['file', 'console', 'syslog'],
-            'level': 'DEBUG',
+            'level': 'CRITICAL',
             'propagate': True,
         },
     },
 }
-
-# These values are necessary only if the app needs to be a client of the API
-SAMPLE_APPLICATION_ADSWS_API_TOKEN = 'this is a secret api token!'
-SAMPLE_APPLICATION_ADSWS_API_URL = 'https://api.adsabs.harvard.edu'
-FEEDBACK_SLACK_END_POINT = ''
-GOOGLE_RECAPTCHA_ENDPOINT = ''
-GOOGLE_RECAPTCHA_PRIVATE_KEY = ''

@@ -1,10 +1,10 @@
+# encoding: utf-8
 import requests
 from flask import current_app
 
 client = lambda: Client(current_app.config).session
 
-
-class Client:
+class Client(object):
     """
     The Client class is a thin wrapper around requests; Use it as a centralized
     place to set application specific parameters, such as the oauth2
@@ -16,10 +16,4 @@ class Client:
 
         :param client_config: configuration dictionary of the client
         """
-
         self.session = requests.Session()
-        self.token = config.get('SAMPLE_APPLICATION_ADSWS_API_TOKEN')
-        if self.token:
-            self.session.headers.update(
-                {'Authorization': 'Bearer %s' % self.token}
-            )

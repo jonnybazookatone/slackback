@@ -1,3 +1,4 @@
+# encoding: utf-8
 """
 Contains useful functions and utilities that are not neccessarily only useful
 for this module. But are also used in differing modules insidide the same

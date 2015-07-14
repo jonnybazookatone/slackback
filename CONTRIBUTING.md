@@ -13,4 +13,3 @@ When contributing please ensure you follow the guidelines below.
 * Implement your changes to your forked repository.
 * Reference the issue in your commit logs.
 * Push your changes to your fork and open a pull request on the master branch.
-* **Don't** modify the CHANGES.md, this will be maintained by ADS developers.

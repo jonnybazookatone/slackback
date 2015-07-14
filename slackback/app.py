@@ -1,15 +1,12 @@
+# encoding: utf-8
 """
 Application factory
 """
 
 import logging.config
 from views import SlackFeedback
-
 from flask import Flask
 from flask.ext.restful import Api
-from flask.ext.discoverer import Discoverer
-from flask.ext.consulate import Consul, ConsulConnectionError
-
 
 def create_app():
     """
@@ -17,12 +14,10 @@ def create_app():
 
     :return: flask.Flask application
     """
-
     app = Flask(__name__, static_folder=None)
     app.url_map.strict_slashes = False
 
     # Load config and logging
-    Consul(app)  # load_config expects consul to be registered
     load_config(app)
     logging.config.dictConfig(
         app.config['SAMPLE_APPLICATION_LOGGING']
@@ -30,13 +25,9 @@ def create_app():
 
     # Register extensions
     api = Api(app)
-    Discoverer(app)
-    # db.init_app(app)
-    #
+
+    # Add end points
     api.add_resource(SlackFeedback, '/feedback/slack')
-    # api.add_resource(UnixTime, '/time')
-    # api.add_resource(PrintArg, '/print/<string:arg>')
-    # api.add_resource(ExampleApiUsage, '/search')
 
     return app
 
@@ -57,10 +48,6 @@ def load_config(app):
         app.config.from_pyfile('local_config.py')
     except IOError:
         app.logger.warning("Could not load local_config.py")
-    # try:
-    #     app.extensions['consul'].apply_remote_config()
-    # except ConsulConnectionError, e:
-    #     app.logger.warning("Could not apply config from consul: {}".format(e))
 
 if __name__ == '__main__':
     app = create_app()
