@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/jonnybazookatone/slackback.svg?branch=master)](https://travis-ci.org/jonnybazookatone/slackback)
+[![Coverage Status](https://coveralls.io/repos/jonnybazookatone/slackback/badge.svg?branch=master&service=github)](https://coveralls.io/github/jonnybazookatone/slackback?branch=master)
 
 # Slackback
 A small web service that allows you to embed a web form within your web application, which forwards the content of the web form to a slack chat room of your dev team.
