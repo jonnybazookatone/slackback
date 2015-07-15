@@ -30,12 +30,3 @@ Press submit, and you will see the following message arrive within your slack ch
 
 # Customisation
 
-
-
-
-
-
-
-
-
-
