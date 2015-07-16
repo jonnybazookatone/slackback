@@ -8,7 +8,6 @@ import requests
 
 from flask import current_app, request
 from flask.ext.restful import Resource
-from client import client
 from utils import get_post_data, err
 
 from werkzeug.exceptions import BadRequestKeyError
@@ -116,7 +115,7 @@ class SlackFeedback(Resource):
                                      .format(error, post_data))
             return err(ERROR_MISSING_KEYWORDS)
 
-        slack_response = client().post(
+        slack_response = requests.post(
             url=current_app.config['FEEDBACK_SLACK_END_POINT'],
             data=formatted_post_data
         )

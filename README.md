@@ -30,12 +30,20 @@ Press submit, and you will see the following message arrive within your slack ch
 
 # Customisation
 
+You can replace the name, posting channel, and emoji of the bot that posts in your chatroom by replacing the two keywords:
 
+  * SLACKBACK_USERNAME
+  * SLACKBACK_CHANNEL
+  * SLACKBACK_EMOJI
 
+You can find a selection of possible emojis on [this cheat sheet](http://www.emoji-cheat-sheet.com).
 
+# Development
 
+A Vagrantfile and puppet manifest are available for development within a virtual machine. To use the vagrant VM defined here you will need to in
+stall *Vagrant* and *VirtualBox*.
 
+  * [Vagrant](https://docs.vagrantup.com)
+  * [VirtualBox](https://www.virtualbox.org)
 
-
-
-
+To load and enter the VM: `vagrant up && vagrant ssh`.

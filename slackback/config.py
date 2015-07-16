@@ -15,7 +15,7 @@ GOOGLE_RECAPTCHA_ENDPOINT = 'https://www.google.com/recaptcha/api/siteverify'
 GOOGLE_RECAPTCHA_PRIVATE_KEY = 'MY_RECAPTCHA_KEY'
 
 # Log settings
-SAMPLE_APPLICATION_LOGGING = {
+SLACKBACK_LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
@@ -30,7 +30,7 @@ SAMPLE_APPLICATION_LOGGING = {
             'formatter': 'default',
             'level': 'DEBUG',
             'class': 'logging.handlers.TimedRotatingFileHandler',
-            'filename': '/tmp/app.log',
+            'filename': '/tmp/slackback.log',
         },
         'console': {
             'formatter': 'default',
@@ -41,7 +41,7 @@ SAMPLE_APPLICATION_LOGGING = {
     'loggers': {
         '': {
             'handlers': ['file', 'console'],
-            'level': 'CRITICAL',
+            'level': 'DEBUG',
             'propagate': True,
         },
     },

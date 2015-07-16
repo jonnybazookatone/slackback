@@ -20,7 +20,7 @@ def create_app():
     # Load config and logging
     load_config(app)
     logging.config.dictConfig(
-        app.config['SAMPLE_APPLICATION_LOGGING']
+        app.config['SLACKBACK_LOGGING']
     )
 
     # Register extensions
@@ -47,7 +47,7 @@ def load_config(app):
     try:
         app.config.from_pyfile('local_config.py')
     except IOError:
-        app.logger.warning("Could not load local_config.py")
+        app.logger.warning('Could not load local_config.py')
 
 if __name__ == '__main__':
     app = create_app()
