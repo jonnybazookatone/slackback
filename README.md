@@ -47,4 +47,3 @@ stall *Vagrant* and *VirtualBox*.
   * [VirtualBox](https://www.virtualbox.org)
 
 To load and enter the VM: `vagrant up && vagrant ssh`.
-=======
